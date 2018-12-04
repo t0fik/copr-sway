@@ -1,4 +1,4 @@
-%global commit  0.1
+%global commit  0.2
 %global gitdate %{nil}
 %global gitrel  %{nil}
 %global gitver  %{nil}
@@ -12,8 +12,8 @@
 
 
 Name:           wlroots
-Version:        0.1
-Release:        2.1%{?gitrel}%{?dist}
+Version:        0.2
+Release:        1%{?gitrel}%{?dist}
 Summary:        A modular Wayland compositor library
 
 # All files in the sources are licensed as MIT, but
@@ -35,7 +35,7 @@ Summary:        A modular Wayland compositor library
 License:        MIT
 URL:            https://github.com/swaywm/%{name}
 Source0:        %{url}/archive/%{commit}.tar.gz#/%{name}-%{version}%{?gitver}.tar.gz
-Patch0:         %{url}/commit/be6210cf8216c08a91e085dac0ec11d0e34fb217.patch#/pkgconfig_version.patch
+#Patch0:         %{url}/commit/be6210cf8216c08a91e085dac0ec11d0e34fb217.patch#/pkgconfig_version.patch
 
 BuildRequires:  gcc
 BuildRequires:  libcap-devel
@@ -136,6 +136,9 @@ done
 
 
 %changelog
+* Tue Dec 04 2018 Jerzy Drozdz <rpmbuilder@jdsieci.pl> - 0.2-1
+- Update to upstream
+
 * Thu Nov 22 2018 Jerzy Drozdz <rpmbuilder@jdsieci.pl> - 0.1-2.1
 - Added dependecies for Fedora28
 
